@@ -1,5 +1,7 @@
 class WelcomeController < ApplicationController
   def index
+    @users = User.all;
+    #@tracks = current_user.soundcloud_client.get("/me/tracks").first
   end
 
   def show

@@ -10,7 +10,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20110217210150) do
+ActiveRecord::Schema.define(:version => 20150421194921) do
 
   create_table "users", :force => true do |t|
     t.integer  "soundcloud_user_id"
@@ -20,6 +20,8 @@ ActiveRecord::Schema.define(:version => 20110217210150) do
     t.datetime "soundcloud_expires_at"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.string   "soundcloud_avatar"
+    t.string   "soundcloud_track"
   end
 
 end

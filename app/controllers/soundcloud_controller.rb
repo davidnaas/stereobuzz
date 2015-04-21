@@ -7,10 +7,19 @@ class SoundcloudController < ApplicationController
     if params[:error].nil?
       soundcloud_client.exchange_token(:code => params[:code])
       me = soundcloud_client.get("/me")
+      tmp = soundcloud_client.get("/me/tracks").first
+      track = ""
+      if tmp
+        track = tmp.stream_url
+      else
+        track = "nostreamurl"
+      end
 
       login_as User.find_or_create_by_soundcloud_user_id({
         :soundcloud_user_id  => me.id,
-        :soundcloud_username => me.username
+        :soundcloud_username => me.username,
+        :soundcloud_avatar => me.avatar_url,
+        :soundcloud_track => track
       })
 
       current_user.update_attributes!({
