@@ -7,6 +7,12 @@ h1.header {
   height: 30px;
 }
 
+h2{
+  font-family: "Avenir";
+  font-weight: 100;
+  text-align: center;
+}
+
 .warning {
   color: red;
   font-size: 9px;
@@ -43,3 +49,29 @@ h1.header {
 .clear {
   clear: both;
 }
+
+img{
+  width: 100%;
+  margin: auto;
+}
+
+.disconnect{
+  position: fixed;
+  top: 0;
+  right: 0;
+  margin: 15px;
+}
+
+.connect{
+  position: fixed;
+  top: 0;
+  left: 0;
+  margin: 15px;
+}
+span {
+  position: fixed;
+  font-family: "Avenir";
+  margin: 5px;
+}
+
+
