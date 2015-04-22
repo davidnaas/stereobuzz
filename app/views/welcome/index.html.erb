@@ -6,7 +6,8 @@
       <section class="space-inner-frame">
           <%= image_tag user.soundcloud_avatar %>
           <h2> <%= user.soundcloud_username %></h2>
-          <audio src=<%= user.soundcloud_track %><%= "?client_id=fa120c2f477a3118927cf6ae273876f8" %> autobuffer autoloop="true" loop controls></audio>
+
+          <audio src=<%= user.soundcloud_track %><%= "?client_id=fa120c2f477a3118927cf6ae273876f8" %> autobuffer autoloop autoplay loop controls></audio>
       </section>
   </div>
 
