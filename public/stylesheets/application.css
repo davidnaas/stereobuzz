@@ -78,4 +78,24 @@ audio{
   display: none;
 }
 
+.space-inner-frame{
+  padding: 15px;
+}
 
+i{
+  color: red;
+}
+
+a{
+  color: black;
+}
+
+a:visited{
+  color: black;
+}
+
+.madeBy{
+  position: fixed;
+  bottom: 0;
+  right: 0;
+}

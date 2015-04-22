@@ -13,4 +13,9 @@ class WelcomeController < ApplicationController
     res = current_user.soundcloud_client.put("/me", :user => {:description => params[:description]})
     redirect_to :action => :show
   end
+
+  def follow
+    current_user.soundcloud_client.put("/me/followings/"+ params[:id])
+    redirect_to action: "index"
+  end
 end
