@@ -1,6 +1,7 @@
 source 'http://rubygems.org'
 ruby '2.0.0'
 gem 'rails', '3.0.4'
+gem 'rake', '0.8.7'
 #gem 'sqlite3'
 gem 'pg'
 gem 'soundcloud', '0.2.0'
