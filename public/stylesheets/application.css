@@ -2,6 +2,15 @@
   display: none;
 }
 
+body{
+  background-image: url("https://download.unsplash.com/5/unsplash-kitsune-4.jpg");
+  background-attachment: fixed;
+  background-size: cover;
+
+
+}
+
+
 h1.header {
   font-size: 18px;
   height: 30px;
@@ -79,7 +88,10 @@ audio{
 }
 
 .space-inner-frame{
-  padding: 15px;
+  background-color: rgba(0, 0, 0, 0.3);
+  padding: 25px;
+  color: white;
+  border-radius: 3px;
 }
 
 i{
