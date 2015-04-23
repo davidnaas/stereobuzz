@@ -58,6 +58,7 @@ SC.Connect = {
 
   popupCallback: function(popupWindow){
     var params = SC.Helper.parseLocation(popupWindow.location);
+    location.reload(true);
     popupWindow.close();
     if(params.error){
       this.errorCallback(params.error);
