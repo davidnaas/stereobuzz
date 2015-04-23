@@ -1,5 +1,7 @@
 source 'http://rubygems.org'
+ruby '2.0.0'
 gem 'rails', '3.0.4'
 #gem 'sqlite3'
 gem 'pg'
 gem 'soundcloud', '0.2.0'
+gem 'rails_12factor'
