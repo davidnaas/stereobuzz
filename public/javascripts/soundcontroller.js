@@ -20,3 +20,10 @@ $(document).ready(function() {
 	});
 
 });
+
+function follow (userId, url) {
+	console.log(window.location.href + "follow/" + userId);
+	$.post(window.location.href + "follow/" + userId, function  (data) {
+		console.log('success');
+	})
+}

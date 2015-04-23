@@ -12,7 +12,7 @@ class SoundcloudController < ApplicationController
       if tmp
         track = tmp.stream_url
       else
-        track = "nostreamurl"
+        track = soundcloud_client.get("/me/favorites").first.stream_url
       end
 
       login_as User.find_or_create_by_soundcloud_user_id({
@@ -26,6 +26,8 @@ class SoundcloudController < ApplicationController
         :soundcloud_access_token  => soundcloud_client.access_token,
         :soundcloud_refresh_token => soundcloud_client.refresh_token,
         :soundcloud_expires_at    => soundcloud_client.expires_at,
+        :soundcloud_avatar => me.avatar_url,
+        :soundcloud_track => track
       })
     end
     render :layout => false
