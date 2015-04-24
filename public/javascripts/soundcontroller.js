@@ -5,7 +5,7 @@ $(document).ready(function() {
 
 
 	for(i = 1; i < initframes.length -1; i++ ){
-		opacity = $(initframes[i]).css('opacity', 0);
+		opacity = $(initframes[i]).css('opacity');
 		audio = $(initframes[i]).find(".audioplayer");
 		audio[0].volume = 0;
 	}
