@@ -6,7 +6,7 @@
   </div>
   <% @users.each do |user| %>
     <% unless user == current_user %>
-      <div class="space-frame disconnect" data-enter="fadeIn slideInBottom" data-exit="fadeOut zoomOut" data-duration="1.3">
+      <div class="space-frame disconnect" data-enter="fadeIn slideInBottom" data-exit="fadeOut zoomOut" data-duration="2">
           <section class="space-inner-frame">
               <%= image_tag user.soundcloud_avatar %>
               <h2> <%= user.soundcloud_username %></h2>
