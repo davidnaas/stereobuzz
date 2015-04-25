@@ -15,10 +15,13 @@ class SoundcloudController < ApplicationController
         track = soundcloud_client.get("/me/favorites").first.stream_url
       end
 
+      avatar =  me.avatar_url
+      avatar = avatar.sub 'large', 't300x300'
+
       login_as User.find_or_create_by_soundcloud_user_id({
         :soundcloud_user_id  => me.id,
         :soundcloud_username => me.username,
-        :soundcloud_avatar => me.avatar_url,
+        :soundcloud_avatar => avatar,
         :soundcloud_track => track
       })
 
@@ -26,7 +29,7 @@ class SoundcloudController < ApplicationController
         :soundcloud_access_token  => soundcloud_client.access_token,
         :soundcloud_refresh_token => soundcloud_client.refresh_token,
         :soundcloud_expires_at    => soundcloud_client.expires_at,
-        :soundcloud_avatar => me.avatar_url,
+        :soundcloud_avatar => avatar,
         :soundcloud_track => track
       })
     end
