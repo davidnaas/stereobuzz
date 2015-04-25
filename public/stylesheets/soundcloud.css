@@ -4,6 +4,7 @@
   width: 207px;
   height: 25px;
   background-image: url(http://connect.soundcloud.com/medium-connect-with-sc.png);
+  margin: auto;
 }
 
 .connect-with-soundcloud .disconnect {
