@@ -8,6 +8,7 @@ $(document).ready(function() {
 		opacity = $(initframes[i]).css('opacity');
 		audio = $(initframes[i]).find(".audioplayer");
 		audio[0].volume = 0;
+		audio[0].play();
 	}
 
 

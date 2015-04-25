@@ -237,7 +237,7 @@
 			for(i = 1; i < audioframes.length -1; i++ ){
 				opacity = $(audioframes[i]).css('opacity');
 				audio = $(audioframes[i]).find(".audioplayer");
-				audio[0].volume = opacity;
+				audio[0].volume = opacity; 
 			}
 
 			for (var i = 0; i < hiddenFrames.length; i++) {
@@ -254,7 +254,6 @@
 			// check if we are not in the interval of the current frame
 			if(top < trigger){ // prev frame
 				$('.space-frame').hide();
-				
 				currentFrame--;
 				if (currentFrame < 0){currentFrame = 0};
 				$(frames[currentFrame].selector).show();
