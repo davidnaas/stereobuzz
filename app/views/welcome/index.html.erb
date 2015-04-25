@@ -14,7 +14,7 @@
       <div class="space-frame" data-enter="fadeIn slideInBottom" data-exit="fadeOut zoomOut" data-duration="2">
           <section class="space-inner-frame">
               <!-- <%= image_tag user.soundcloud_avatar %> -->
-              <img src= <%= user.soundcloud_avatar%> onerror="imagError(this)"> 
+              <img src= <%= user.soundcloud_avatar%> onerror="imageError(this)"> 
               <h2> <%= user.soundcloud_username %></h2>
 
               <%= button_to 'Follow', follow_path(user.soundcloud_user_id) %> 
@@ -46,8 +46,12 @@
 
 <% end -%>
 
-
-
+<script>
+  function imageError (element) {
+    element.onerror='';
+    element.src= 'http://placekitten.com/300/300'
+  }
+</script>
 
 <div class="connect-with-soundcloud <%= "connected" if logged_in? %>">
   <%= link_to "Disconnect From SoundCloud", soundcloud_disconnect_path, :class => "disconnect" %>
