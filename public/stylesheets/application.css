@@ -97,11 +97,6 @@ img{
   border-radius: 3px;
 }
 
-img{
-  min-width: 300px;
-  min-height: 300px;
-}
-
 i{
   color: red;
 }
