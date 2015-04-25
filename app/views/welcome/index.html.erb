@@ -14,6 +14,7 @@
       <div class="space-frame" data-enter="fadeIn slideInBottom" data-exit="fadeOut zoomOut" data-duration="2">
           <section class="space-inner-frame">
               <%= image_tag user.soundcloud_avatar %>
+              <img src= <%= user.soundcloud_avatar%> onerror="this.src=&quotehttps://placekitten.com/200/300&quote"> 
               <h2> <%= user.soundcloud_username %></h2>
 
               <%= button_to 'Follow', follow_path(user.soundcloud_user_id) %> 
