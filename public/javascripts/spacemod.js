@@ -299,6 +299,7 @@
 				for(var property in trans){
 					if (property == 'scale' || property == 'translate3d' || property == 'rotate' || property == 'rotate3d'){
 						props['transform'] += propValueToCssFormat(property, deltaValue(trans, scrollInElement, property));
+						props['-webkit-transform'] = props['transform'];
 					}else{
 						props[property] = propValueToCssFormat(property, deltaValue(trans, scrollInElement, property));
 					};
@@ -310,6 +311,7 @@
 					for(var property in trans){
 						if (property == 'scale' || property == 'translate3d' || property == 'rotate'){
 							props['transform'] += propValueToCssFormat(property, deltaValue(trans, scrollInElement*2, property));
+							props['-webkit-transform'] = props['transform']
 						}else{
 							props[property] = propValueToCssFormat(property, deltaValue(trans, scrollInElement*2, property));
 						};
@@ -320,6 +322,7 @@
 					for(var property in trans){
 						if (property == 'scale' || property == 'translate3d' || property == 'rotate' || property == 'rotate3d'){
 							props['transform'] += propValueToCssFormat(property, deltaValue(trans, (scrollInElement - (frames[currentFrame].duration / 2))*2, property));
+							props['-webkit-transform'] = props['transform']
 						}else{
 							props[property] = propValueToCssFormat(property, deltaValue(trans, (scrollInElement - (frames[currentFrame].duration / 2))*2, property));
 						};

@@ -2,7 +2,7 @@ $(document).ready(function() {
 
 	var busy = false;
 	initframes = $('.space-frame')
-
+	$('.vinyl')[0].volume = 0.25
 
 	for(i = 1; i < initframes.length -1; i++ ){
 		opacity = $(initframes[i]).css('opacity');
