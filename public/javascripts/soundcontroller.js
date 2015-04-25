@@ -31,6 +31,11 @@ $(document).ready(function() {
 
 });
 
+function imagError (element) {
+	element.onerror='';
+    element.src= 'http://placekitten.com/300/300'
+}
+
 function follow (userId, url) {
 	console.log(window.location.href + "follow/" + userId);
 	$.post(window.location.href + "follow/" + userId, function  (data) {
